@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="ps.css">
+</head>
+<body>
+    <header>
+        <h1>Idar Maha</h1>
+    </header>
+    <section id="moi">
+        <h2>A propos de moi</h2>
+        <p>"Je m'appelle maha, j'ai 21 ans et je poursuis mes études à l'EMSI après avoir obtenu mon bac en sciences physiques en 2021. Passionnée par l'informatique , j'ai choisi de continuer mon parcours dans ce domaine pour approfondir mes compétences techniques et explorer de nouvelles opportunités."
+            .</p>
+        <img src="WhatsApp Image 2024-10-27 at 21.30.40 (1).jpeg" alt="">
+    </section>
+    <section id="hb-ob">
+        <h2>HOBBIES</h2>
+        <ul>
+            <li>Voyage</li>
+            <li>Tennis</li>
+            <li>Musique</li>
+        </ul>
+        <h2>Objectifs</h2>
+        <ol>
+            <li>Gérer mon temps et organiser mon travail</li>
+            <li>Optimiser mon profil LinkedIn</li>
+            <li>Apprendre un nouveau langage de programmation</li>
+            <li>Renforcer mes compétences en communication</li>
+        </ol>
+    </section>
+    <section id="friends">
+        <h2>Tableau d'amis</h2>
+        <table border="1">
+            <tr>
+                <th>Nom</th>
+                <th>Age</th>
+                <th>Ville</th>
+                <th>Lien</th>
+            </tr>
+            <tr>
+                <td>ALAOUI</td>
+                <td>20</td>
+                <td>CASABLANCA</td>
+                <td><a href="https://github.com/User-lang-max/ZINEB-S-WEBSITE/upload/main" target="_blank">lien</a></td>
+            </tr>
+            <tr>
+                <td>KECHCHAF</td>
+                <td>20</td>
+                <td>CASABLANCA</td>
+                <td><a href="https://github.com/SaraKachchaf/Page-Web-Personnelle" target="_blank">lien</a></td>
+            </tr>
+            <tr>
+                <td>ElHATTAB</td>
+                <td>20</td>
+                <td>CASABLANCA</td>
+                <td><a href="https://github.com/Dev-web-Maria/profile_avance.git" target="_blank">lien</a></td>
+            </tr>
+            <tr>
+                <td>Chaouki</td>
+                <td>20</td>
+                <td>CASABLANCA</td>
+                <td><a href="https://github.com/GHITA-chaouki/WEB/commits?author=GHITA-chaouki" target="_blank">lien</a></td>
+            </tr>
+        </table>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contactForm">
+            <label for="nom">Nom</label><br>
+            <input type="text" id="nom" required><br><br>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" required><br><br>
+            <label for="message">Message</label><br>
+            <textarea id="message"></textarea><br><br>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    <script>
+        document.getElementById('contactForm').onsubmit = function(event) {
+            const name = document.getElementById('nom').value;
+            const email = document.getElementById('email').value;
+
+            if (!name || !email) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                event.preventDefault();
+            } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email)) {
+                alert('Veuillez entrer un email valide.');
+                event.preventDefault();
+            } else {
+                alert('Formulaire envoyé avec succès!');
+            }
+        };
+    </script>
+</body>
+</html>
